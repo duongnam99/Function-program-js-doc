@@ -7,15 +7,15 @@
 
 Structure Synth — Orihaus (CC BY 2.0)
 
-> "Master the JavaScript Interview" là 1 series các bài viết được thiết kế để chuẩn bị cho người xin việc những câu hỏi thông thường mà họ rất dễ gặp khi ứng tuyển cho các vị trí Javascript từ level mid đến senior. Đây đều là những câu hỏi tôi thường sử dụng trong phỏng vấn thực tế.
+> "Master the JavaScript Interview" là 1 series các bài viết được thiết kế để chuẩn bị cho người xin việc những câu hỏi thông thường mà họ rất dễ gặp khi ứng tuyển cho các vị trí Javascript từ level mid đến senior. Đây đều là những câu hỏi tôi thường sử dụng trong phỏng vấn thực tế.  
 
-Lập trình hàm đã trở thành một chủ đề rất hot trong thế giới JS. Một vài năm trước, chỉ một vài lập trình viên JS biết function programming là gì, nhưng mọi mã nguồn của các ứng dụng lớn tôi thấy trong 3 năm qua đêu mang nặng tư tưởng của lập trình hàm.
+Lập trình hàm đã trở thành một chủ đề rất hot trong thế giới JS. Một vài năm trước, chỉ một vài lập trình viên JS biết function programming là gì, nhưng mọi mã nguồn của các ứng dụng lớn tôi thấy trong 3 năm qua đêu mang nặng tư tưởng của lập trình hàm.  
 
-**Functional programming** (thường viết tắt là FP) là tiến trình xây dựng phần mềm bằng **pure functions**, tránh **shared state,** **mutable data,** và  **side-effects**. Lập trình hàm mang tính **declarative** hơn là **imperative**, và các thuộc tính của ứng dụng sẽ đi theo các pure function. đối lập với lập trình hướng đối tượng, nơi mà thuộc tính của ứng dụng thường chia sẻ và đặt chung với phương thức trong đối tượng.
+**Functional programming** (thường viết tắt là FP) là tiến trình xây dựng phần mềm bằng **pure functions**, tránh **shared state,** **mutable data,** và  **side-effects**. Lập trình hàm mang tính **declarative** hơn là **imperative**, và các thuộc tính của ứng dụng sẽ đi theo các pure function. đối lập với lập trình hướng đối tượng, nơi mà thuộc tính của ứng dụng thường chia sẻ và đặt chung với phương thức trong đối tượng.  
 
-Lập trình hàm là một **mô hình lập trình**, có nghĩa là đây là cách suy nghĩ về việc xây dựng phần mềm dựa trên nền móng, các nguyên tắc được định nghĩa cơ bản, (liệt kê bên dưới). Những ví dụ khác về các mô hình lập trình bao gồm lập trình hướng đối tượng và lập trình thủ tục.
+Lập trình hàm là một **mô hình lập trình**, có nghĩa là đây là cách suy nghĩ về việc xây dựng phần mềm dựa trên nền móng, các nguyên tắc được định nghĩa cơ bản, (liệt kê bên dưới). Những ví dụ khác về các mô hình lập trình bao gồm lập trình hướng đối tượng và lập trình hàm.  
 
-Lập trình hàm có xu hướng ngắn gọn hơn, dễ đoán hơn, và dễ dàng kiểm thử hơn lập trình imperative hay hướng đổi tượng - nhưng nếu bạn không quen với nó cũng như các pattern liên quan, lập trình hàm có thể nặng nề hơn, và tài liệu liên quan sẽ khó hiểu đối với những người mới.
+Lập trình hàm có xu hướng ngắn gọn hơn, dễ đoán hơn, và dễ dàng kiểm thử hơn lập trình imperative hay hướng đổi tượng - nhưng nếu bạn không quen với nó cũng như các pattern liên quan, lập trình hàm có thể nặng nề hơn, và tài liệu liên quan sẽ khó hiểu đối với những người mới.  
 
 Nếu bạn bắt đầu google cụm từ functional programming, bạn sẽ nhanh húc phải bức tường academic lingo mà cực kỳ đáng sợ với người mới bắt đầu. Sẽ là nói dối nếu bảo có cách nhanh chóng để học chúng. Nếu bạn đã lập trình Javascript một thời gian, bạn sẽ có thuận lợi khi có thể sử dụng nhiều khái niệm và tiện ích lập trình hàm trong phần mềm thực tế.
 
@@ -29,13 +29,13 @@ Phần khó nhất là tiêu hóa hết tất cả các từ vựng lạ. có r�
 * Avoid mutating state
 * Avoid side effects
 
-Nói cách khác, nếu bạn muốn biết ý nghĩa của lập trình hàm trong thực tế, bạn phải bắt đầu với việc tìm hiểu những khái niệm căn bản sau:
+Nói cách khác, nếu bạn muốn biết ý nghĩa của lập trình hàm trong thực tế, bạn phải bắt đầu với việc tìm hiểu những khái niệm căn bản sau:  
 
 **pure function** là hàm mà:
 * với input gióng nhau sẽ luôn cho output giống nhau
-* Không có ảnh hưởng bên ngoài.
+* Không có ảnh hưởng bên ngoài.  
 
-Pure functions có rất nhiều tính chất quan trọng của lập trình hàm, bao gồm **referential transparency** (bạn có thể thay thế lời gọi hàm với kết quả trả về của nó mà không phải thay đổi ý nghĩa của chương trinh). Đọc ["What is a Pure Function?"][2] để biết thêm chi tiết.
+Pure functions có rất nhiều tính chất quan trọng của lập trình hàm, bao gồm **referential transparency** (bạn có thể thay thế lời gọi hàm với kết quả trả về của nó mà không phải thay đổi ý nghĩa của chương trinh). Đọc ["What is a Pure Function?"][2] để biết thêm chi tiết.  
 
 **Function composition** là quá trình gộp 2 hay nhiều hàm để tạo ra 1 hàm mới hay thực hiện một vài tính toán. Ví dụ, gộp hàm `f . g` (dấu chấm nhgiax là) "compose với") tương đương với `f(g(x))` trong JavaScript. Hiểu function composition là một bước quan trọng để hiểu cách xây dựng phần mềm sử dụng lập trình hàm. Đọc ["What is Function Composition?"][3] để biêt thêm.
 
@@ -61,12 +61,13 @@ Trong ví dụ bên trên, chúng tôi sử dụng Object.assign() và truyền 
 
 Nếu bạn để ý kĩ hơn trong console.log() trong ví dụ này, bạn sẽ nhận thấy 1 vài thứ đã được đề cập : function composition. Nhắc lại 1 chút, function composition giống như kiểu f(g(x)). Trong trường hợp này, húng ta thay f() và g() với x1() và x2() để cho phép gộp x1.x2  
 
-Tất nhiên, nếu bạn thay đổi thứ tự của phép gộp, đầu ra cũng sẽ thay đổi. Thứ tự của việc thực hiện sẽ ảnh hưởng. f(g(x)) không luôn băng `g(f(x)), nhưng những gì không ảnh hưởng nữa là những thứ xảy ra với các biến bên ngoài hàm - và đây là 1 canh bạc lớn. Với các hàm impure, không thể hoàn toàn hiểu được 1 hàm làm gì trừ khi bạn biết toàn bộ lịch sử của mỗi biến hàm sử dụng hoặc ảnh hưởng,  
+Tất nhiên, nếu bạn thay đổi thứ tự của phép gộp, đầu ra cũng sẽ thay đổi. Thứ tự của việc thực hiện sẽ ảnh hưởng. f(g(x)) không luôn băng `g(f(x))`, nhưng những gì không ảnh hưởng nữa là những thứ xảy ra với các biến bên ngoài hàm - và đây là 1 canh bạc lớn. Với các hàm impure, không thể hoàn toàn hiểu được 1 hàm làm gì trừ khi bạn biết toàn bộ lịch sử của mỗi biến hàm sử dụng hoặc ảnh hưởng,  
 
-Loại bỏ các lời gọi hàm ảnh hưởng bởi thời gian, và loại trừ toàn bộ các lớp của các lỗi tiềm năng.
+Loại bỏ các lời gọi hàm ảnh hưởng bởi thời gian, và loại trừ toàn bộ các lớp của các lỗi tiềm năng.  
+
 ### Immutability  
 
-Một đối tượng **immutable** là một đối tượng mà không thể chỉnh sửa sau khi nó được tạo ra. Ngược lại, đối tượng **mutable** là một đối tượng bất kì có thể chỉnh sửa được sau khi được tạo ra.
+Một đối tượng **immutable** là một đối tượng mà không thể chỉnh sửa sau khi nó được tạo ra. Ngược lại, đối tượng **mutable** là một đối tượng bất kì có thể chỉnh sửa được sau khi được tạo ra.  
 
 Tính bất biến là một khái niệm trọng tâm của lập trình hàm vì nếu không có nó, luồng dữ liệu trong chương trình của bạn sẽ bị mất mát. Lịch sử trạng thái bị bỏ qua và các lỗi lạ có thể xuất hiện trọng phần mềm của bạn. Để hiểu hơn về ý nghĩa của sự bất biến, đọc ["The Dao of Immutability"][5].  
 
@@ -91,9 +92,9 @@ Tôi đã thử nghiệm với cả hai, và có xu hướng sử dụng Immutab
 
 ### Hiệu ứng phụ 
 
-Một hiệu ứng phụ là bất kỳ thay đổi trạng thái của ứng dụng nào mà có thể quan sát được bên ngoài hàm được gọi, ngoài giá trị trả về của nó. Các hiệu ứng phụ bao gồm:
+Một hiệu ứng phụ là bất kỳ thay đổi trạng thái của ứng dụng nào mà có thể quan sát được bên ngoài hàm được gọi, ngoài giá trị trả về của nó. Các hiệu ứng phụ bao gồm:  
 
-* Sửa đổi bất kỳ biến bên ngoài hoặc thuộc tính đối tượng nào (ví dụ: biến toàn cầu hoặc biến trong chuỗi phạm vi hàm chính)  
+* Sửa đổi bất kỳ biến bên ngoài hoặc thuộc tính đối tượng nào (ví dụ: biến toàn cầu hoặc biến trong chuỗi phạm vi hàm chính) 
 * Ghi ra console  
 * Viết ra màn hình
 * Viết ra 1 file
@@ -101,9 +102,9 @@ Một hiệu ứng phụ là bất kỳ thay đổi trạng thái của ứng d�
 * Gọi 1 tiến trình bên ngoài
 * Gọi các hàm khác với các ảnh hưởng phụ  
 
-Hiệu ứng phụ là thứ nên tránh nhất trong lập trình chức năng, làm cho hiệu quả của một chương trình dễ hiểu hơn nhiều, và dễ dàng kiểm tra hơn nhiều.  
+Hiệu ứng phụ là thứ nên tránh nhất trong lập trình hàm, làm cho hiệu quả của một chương trình dễ hiểu hơn nhiều, và dễ dàng kiểm tra hơn nhiều.  
 
-Haskell và các ngôn ngữ chức năng khác thường xuyên cô lập và đóng gói các tác dụng phụ từ các hàm thuần túy bằng cách sử dụng monads. Chủ đề của các monads đủ sâu để viết một cuốn sách, vì vậy chúng ta sẽ lưu ý cuốn sách đó sau này.  
+Haskell và các ngôn ngữ hàm khác thường xuyên cô lập và đóng gói các tác dụng phụ từ các hàm thuần túy bằng cách sử dụng monads. Chủ đề của các monads đủ sâu để viết một cuốn sách, vì vậy chúng ta sẽ lưu ý cuốn sách đó sau này.  
 
 Những gì bạn cần biết ngay bây giờ là các tác vụ phụ cần phải được cô lập với phần còn lại của phần mềm của bạn. Nếu bạn giữ các hiệu ứng phụ tách biệt với phần còn lại của logic chương trình, phần mềm của bạn sẽ dễ dàng hơn để mở rộng, tái cấu trúc, gỡ lỗi, kiểm tra và bảo trì.  
 
@@ -169,7 +170,7 @@ Thông thường trong code, bạn sẽ thấy các biểu thức được gán 
 
 ### Kết luận  
 
-Các dầu hiệu của lập trình hàm:  
+Các dấu hiệu của lập trình hàm:  
 
 * Các hàm thuần túy thay vì các tác dụng phụ và trạng thái được chia sẻ
 * Tính bất biến trên dữ liệu thay đổi
