@@ -1,7 +1,7 @@
 
 [Source](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0 "Permalink to Master the JavaScript Interview: What is Functional Programming?")
 
-# Master the JavaScript Interview: What is Functional Programming?
+# Master the JavaScript Interview: Lập trình hàm là gì?
 
 ![][1]
 
@@ -17,11 +17,11 @@ Lập trình hàm là một **mô hình lập trình**, có nghĩa là đây là
 
 Lập trình hàm có xu hướng ngắn gọn hơn, dễ đoán hơn, và dễ dàng kiểm thử hơn lập trình imperative hay hướng đổi tượng - nhưng nếu bạn không quen với nó cũng như các pattern liên quan, lập trình hàm có thể nặng nề hơn, và tài liệu liên quan sẽ khó hiểu đối với những người mới.  
 
-Nếu bạn bắt đầu google cụm từ functional programming, bạn sẽ nhanh húc phải bức tường academic lingo mà cực kỳ đáng sợ với người mới bắt đầu. Sẽ là nói dối nếu bảo có cách nhanh chóng để học chúng. Nếu bạn đã lập trình Javascript một thời gian, bạn sẽ có thuận lợi khi có thể sử dụng nhiều khái niệm và tiện ích lập trình hàm trong phần mềm thực tế.
+Nếu bạn bắt đầu google cụm từ functional programming, bạn sẽ nhanh chóng húc phải bức tường academic lingo mà cực kỳ đáng sợ với người mới bắt đầu. Sẽ là nói dối nếu bảo có cách nhanh chóng để học chúng. Nếu bạn đã lập trình Javascript một thời gian, bạn sẽ có thuận lợi khi có thể sử dụng nhiều khái niệm và tiện ích lập trình hàm trong phần mềm thực tế.
 
 > Đừng để tất cả từ ngữ mới làm bạn sợ . Nó dễ hơn bạn nghĩ.
 
-Phần khó nhất là tiêu hóa hết tất cả các từ vựng lạ. có rất nhiều nội dung trong các tìm kiếm định nghĩa vu vơ cần được hiểu trước khi bạn có thể bắt đầu nắm lấy ý tưởng của lập  trình hàm: 
+Phần khó nhất là tiêu hóa hết tất cả các từ vựng lạ. có rất nhiều nội dung trong các tìm kiếm định nghĩa vu vơ cần được hiểu trước khi bạn có thể bắt đầu nắm lấy ý tưởng của lập trình hàm: 
 
 * Pure functions
 * Function composition
@@ -37,13 +37,13 @@ Nói cách khác, nếu bạn muốn biết ý nghĩa của lập trình hàm tr
 
 Pure functions có rất nhiều tính chất quan trọng của lập trình hàm, bao gồm **referential transparency** (bạn có thể thay thế lời gọi hàm với kết quả trả về của nó mà không phải thay đổi ý nghĩa của chương trinh). Đọc ["What is a Pure Function?"][2] để biết thêm chi tiết.  
 
-**Function composition** là quá trình gộp 2 hay nhiều hàm để tạo ra 1 hàm mới hay thực hiện một vài tính toán. Ví dụ, gộp hàm `f . g` (dấu chấm nhgiax là) "compose với") tương đương với `f(g(x))` trong JavaScript. Hiểu function composition là một bước quan trọng để hiểu cách xây dựng phần mềm sử dụng lập trình hàm. Đọc ["What is Function Composition?"][3] để biêt thêm.
+**Function composition** là quá trình gộp 2 hay nhiều hàm để tạo ra 1 hàm mới hay thực hiện một vài tính toán. Ví dụ, gộp hàm `f . g` (dấu chấm nhgiax là) "compose với") tương đương với `f(g(x))` trong JavaScript. Hiểu function composition là một bước quan trọng để hiểu cách xây dựng phần mềm sử dụng lập trình hàm. Đọc ["What is Function Composition?"][3] để biết thêm.
 
 ### Shared State
 
 **Shared state** là bất cứ biến, đối tượng, hay vùng nhớ nào tồn tại trong một scope được chia sẻ hoặc một thuộc tính của một đối tượng được truyền vào scope. một scope được chia sẻ bao gồm global scope hoặc closure scopes. Thông thường trong lập trình hướng đối tượng, các đối tượng được chia sẻ trong scope bằng cách thêm các thuộc tính vào các đối tượng khác.
 
-Ví dụ, một trò chơi máy tính có thể có một đối tượng game chính, với các nhân vật và các item trò chơi được lưu thành các thuộc tính trong đối tượng đó. Lập trình hàm thường tránh shared state - thay vì dựa vào các cấu trúc dữ liệu không thay đổi và các phép tính thuần để lấy được các dữ liệu mới từ các dữ liệu sẵn có. Chí tiết hơn về cách mà phần mềm hướng chức năng có thể xử lý các trạng thái của ứng dụng, xem cuốn "[10 Tips for Better Redux Architecture][4]".
+Ví dụ, một trò chơi máy tính có thể có một đối tượng game chính, với các nhân vật và các item trò chơi được lưu thành các thuộc tính trong đối tượng đó. Lập trình hàm thường tránh shared state - thay vì dựa vào các cấu trúc dữ liệu không thay đổi và các phép tính thuần để lấy được các dữ liệu mới từ các dữ liệu sẵn có. Chí tiết hơn về cách mà phần mềm chức năng có thể xử lý các trạng thái của ứng dụng, xem cuốn "[10 Tips for Better Redux Architecture][4]".
 
 Vấn đề với shared state là để hiểu về hiệu lực của một hàm, bạn phải biết toàn bộ lịch sử của mỗi biến được chia sẻ mà hàm sử dụng hay tác động đến.  
 
@@ -65,7 +65,7 @@ Tất nhiên, nếu bạn thay đổi thứ tự của phép gộp, đầu ra c�
 
 Loại bỏ các lời gọi hàm ảnh hưởng bởi thời gian, và loại trừ toàn bộ các lớp của các lỗi tiềm năng.  
 
-### Immutability  
+### Sự bất biến  
 
 Một đối tượng **immutable** là một đối tượng mà không thể chỉnh sửa sau khi nó được tạo ra. Ngược lại, đối tượng **mutable** là một đối tượng bất kì có thể chỉnh sửa được sau khi được tạo ra.  
 
@@ -155,7 +155,7 @@ Ví dụ, ánh xạ **Imperative** này lấy một mảng các số và trả v
 
 Ánh xạ **Declarative** này cũng làm điều tương tự, nhưng tóm tắt điều khiển luồng bằng cách sử dụng tiện ích hàm `Array.prototype.map()`, cho phép bạn thể hiện rõ ràng luồng dữ liệu:  
 
-Code **Imperative** bắt buộc thường xuyên sử dụng các câu lệnh. Câu lệnh là một đoạn code thực hiện một số hành động. Ví dụ về các câu lệnh thường được sử dụng bao gồm `for`,`if`, `switch`,`throw`, v.v ...  
+Code **Imperative** thường xuyên sử dụng các câu lệnh. Câu lệnh là một đoạn code thực hiện một số hành động. Ví dụ về các câu lệnh thường được sử dụng bao gồm `for`,`if`, `switch`,`throw`, v.v ...  
 
 Code **declarative** dựa nhiều hơn vào biểu thức. Biểu thức là một đoạn mã đánh giá một số giá trị. Biểu thức thường là một số kết hợp của các lời gọi hàm, giá trị và toán tử được đánh giá để tạo ra giá trị kết quả.  
 
