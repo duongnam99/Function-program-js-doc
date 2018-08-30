@@ -1,15 +1,15 @@
 
 [Source](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0 "Permalink to Master the JavaScript Interview: What is Functional Programming?")
 
-# Master the JavaScript Interview: Lập trình hàm là gì?
+# Bậc thầy về phỏng vấn Javascript : Lập trình chức năng là gì?
 
 ![][1]
 
 Structure Synth — Orihaus (CC BY 2.0)
 
-> "Master the JavaScript Interview" là 1 series các bài viết được thiết kế để chuẩn bị cho người xin việc những câu hỏi thông thường mà họ rất dễ gặp khi ứng tuyển cho các vị trí Javascript từ level mid đến senior. Đây đều là những câu hỏi tôi thường sử dụng trong phỏng vấn thực tế.  
+> "Master the JavaScript Interview" là 1 series các bài viết được thiết kế để chuẩn bị cho người xin việc những câu hỏi thông thường mà họ rất dễ gặp khi ứng tuyển cho các vị trí Javascript trình độ từ cấp trung đến cấp cao. Đây đều là những câu hỏi tôi thường sử dụng trong phỏng vấn thực tế.  
 
-Lập trình hàm đã trở thành một chủ đề rất hot trong thế giới JS. Một vài năm trước, chỉ một vài lập trình viên JS biết function programming là gì, nhưng mọi mã nguồn của các ứng dụng lớn tôi thấy trong 3 năm qua đêu mang nặng tư tưởng của lập trình hàm.  
+Lập trình chức năng đã trở thành một chủ đề rất hot trong thế giới JS. Một vài năm trước, chỉ một vài lập trình viên JS biết function programming là gì, nhưng mọi mã nguồn của các ứng dụng lớn tôi thấy trong 3 năm qua đêu mang nặng tư tưởng của lập trình hàm.  
 
 **Functional programming** (thường viết tắt là FP) là tiến trình xây dựng phần mềm bằng **pure functions**, tránh **shared state,** **mutable data,** và  **side-effects**. Lập trình hàm mang tính **declarative** hơn là **imperative**, và các thuộc tính của ứng dụng sẽ đi theo các pure function. đối lập với lập trình hướng đối tượng, nơi mà thuộc tính của ứng dụng thường chia sẻ và đặt chung với phương thức trong đối tượng.  
 
@@ -17,7 +17,7 @@ Lập trình hàm là một **mô hình lập trình**, có nghĩa là đây là
 
 Lập trình hàm có xu hướng ngắn gọn hơn, dễ đoán hơn, và dễ dàng kiểm thử hơn lập trình imperative hay hướng đổi tượng - nhưng nếu bạn không quen với nó cũng như các pattern liên quan, lập trình hàm có thể nặng nề hơn, và tài liệu liên quan sẽ khó hiểu đối với những người mới.  
 
-Nếu bạn bắt đầu google cụm từ functional programming, bạn sẽ nhanh chóng húc phải bức tường academic lingo mà cực kỳ đáng sợ với người mới bắt đầu. Sẽ là nói dối nếu bảo có cách nhanh chóng để học chúng. Nếu bạn đã lập trình Javascript một thời gian, bạn sẽ có thuận lợi khi có thể sử dụng nhiều khái niệm và tiện ích lập trình hàm trong phần mềm thực tế.
+Nếu bạn bắt đầu google cụm từ functional programming, bạn sẽ nhanh chóng húc phải bức tường academic lingo mà cực kỳ đáng sợ với người mới bắt đầu. Sẽ là nói dối nếu bảo có cách nhanh chóng để học chúng. Nếu bạn đã lập trình Javascript một thời gian,rất có thể bạn đã sử dụng rất nhiều khái niệm và tiện ích lập trình chức năng trong phần mềm thực tế của bạn.
 
 > Đừng để tất cả từ ngữ mới làm bạn sợ . Nó dễ hơn bạn nghĩ.
 
@@ -33,7 +33,7 @@ Nói cách khác, nếu bạn muốn biết ý nghĩa của lập trình hàm tr
 
 **pure function** là hàm mà:
 * với input gióng nhau sẽ luôn cho output giống nhau
-* Không có ảnh hưởng bên ngoài.  
+* Không có side-effects.  
 
 Pure functions có rất nhiều tính chất quan trọng của lập trình hàm, bao gồm **referential transparency** (bạn có thể thay thế lời gọi hàm với kết quả trả về của nó mà không phải thay đổi ý nghĩa của chương trinh). Đọc ["What is a Pure Function?"][2] để biết thêm chi tiết.  
 
@@ -63,11 +63,11 @@ Nếu bạn để ý kĩ hơn trong console.log() trong ví dụ này, bạn s�
 
 Tất nhiên, nếu bạn thay đổi thứ tự của phép gộp, đầu ra cũng sẽ thay đổi. Thứ tự của việc thực hiện sẽ ảnh hưởng. f(g(x)) không luôn băng `g(f(x))`, nhưng những gì không ảnh hưởng nữa là những thứ xảy ra với các biến bên ngoài hàm - và đây là 1 canh bạc lớn. Với các hàm impure, không thể hoàn toàn hiểu được 1 hàm làm gì trừ khi bạn biết toàn bộ lịch sử của mỗi biến hàm sử dụng hoặc ảnh hưởng,  
 
-Loại bỏ các lời gọi hàm ảnh hưởng bởi thời gian, và loại trừ toàn bộ các lớp của các lỗi tiềm năng.  
+Loại bỏ các lời gọi hàm ảnh hưởng bởi thời gian, và loại trừ toàn bộ các lớp của các lỗi tiềm ẩn.  
 
-### Sự bất biến  
+### Tính bất biến  
 
-Một đối tượng **immutable** là một đối tượng mà không thể chỉnh sửa sau khi nó được tạo ra. Ngược lại, đối tượng **mutable** là một đối tượng bất kì có thể chỉnh sửa được sau khi được tạo ra.  
+Một đối tượng **bất biến** là một đối tượng mà không thể chỉnh sửa sau khi nó được tạo ra. Ngược lại, đối tượng **khả biến** là một đối tượng bất kì có thể chỉnh sửa được sau khi được tạo ra.  
 
 Tính bất biến là một khái niệm trọng tâm của lập trình hàm vì nếu không có nó, luồng dữ liệu trong chương trình của bạn sẽ bị mất mát. Lịch sử trạng thái bị bỏ qua và các lỗi lạ có thể xuất hiện trọng phần mềm của bạn. Để hiểu hơn về ý nghĩa của sự bất biến, đọc ["The Dao of Immutability"][5].  
 
@@ -90,11 +90,11 @@ Có một số thư viện trong JavaScript tận dụng các trie, bao gồm [I
 Tôi đã thử nghiệm với cả hai, và có xu hướng sử dụng Immutable.js trong các dự án lớn đòi hỏi một lượng khá đáng kể trạng thái bất biến. Để biết thêm về điều đó, hãy đọc ["10 Tips for Better Redux Architecture"][4].  
 
 
-### Hiệu ứng phụ 
+### Side Effects
 
 Một hiệu ứng phụ là bất kỳ thay đổi trạng thái của ứng dụng nào mà có thể quan sát được bên ngoài hàm được gọi, ngoài giá trị trả về của nó. Các hiệu ứng phụ bao gồm:  
 
-* Sửa đổi bất kỳ biến bên ngoài hoặc thuộc tính đối tượng nào (ví dụ: biến toàn cầu hoặc biến trong chuỗi phạm vi hàm chính) 
+* Sửa đổi bất kỳ biến bên ngoài hoặc thuộc tính đối tượng nào (ví dụ: biến toàn cục hoặc biến trong chuỗi phạm vi hàm chính) 
 * Ghi ra console  
 * Viết ra màn hình
 * Viết ra 1 file
